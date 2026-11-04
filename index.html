@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Social Media Sales · 30X</title>
+<meta name="description" content="Vender en redes ya no es opcional. Instagram & TikTok for Business y LinkedIn Sales 2.0: los programas de 30X para convertir tu presencia en redes en un canal de ventas.">
+<meta property="og:title" content="Vender en redes ya no es opcional · 30X">
+<meta property="og:description" content="Instagram & TikTok for Business y LinkedIn Sales 2.0. Elige tu ruta y prepárate para tu llamada.">
+<meta property="og:image" content="https://30x.com/og-home.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070707;--raised:#0f0f0f;--card:#141414;--card-2:#1b1b1b;
+  --ink:#f4f4f2;--soft:#a9a79e;--dim:#7d7b73;--line:rgba(255,255,255,.11);
+  --neon:#E9FF7B;--on-neon:#000;
+  --ig:#ff5ea8;--ig-2:#ffb35c;--li:#4ea8ff;
+  --radius:18px;--sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+html,body{max-width:100%;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--neon)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 24px;font:700 15px/1.2 var(--sans);text-decoration:none;cursor:pointer;border:0;transition:transform .15s,box-shadow .2s,background .2s,color .2s;text-align:center}
+.btn-neon{background:var(--neon);color:var(--on-neon);box-shadow:0 10px 30px rgba(233,255,123,.18)}
+.btn-neon:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(233,255,123,.28)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.26)}
+.btn-ghost:hover{border-color:var(--neon);color:var(--neon)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.78);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand .v-logo{height:22px;width:auto;flex:none}
+.brand .n{padding-left:12px;border-left:1px solid rgba(255,255,255,.18);font-size:11.5px;letter-spacing:.16em;color:var(--soft);font-weight:700;white-space:nowrap}
+.route{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}
+.route a{font-size:13px;font-weight:600;text-decoration:none;padding:8px 14px;border-radius:999px;color:var(--soft);white-space:nowrap;transition:background .2s,color .2s}
+.route a:hover{color:var(--ink)}
+.route a.on[data-r="ig"]{background:linear-gradient(90deg,var(--ig),var(--ig-2));color:#000}
+.route a.on[data-r="li"]{background:var(--li);color:#000}
+@media(max-width:760px){.brand .n{display:none}.route a{padding:7px 10px;font-size:12px}}
+@media(max-width:400px){.route a .long{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:clamp(56px,10vw,120px) 0 clamp(48px,7vw,80px)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero .scrim{position:absolute;inset:0;background:radial-gradient(90% 80% at 80% 10%,rgba(233,255,123,.10),transparent 60%),radial-gradient(70% 70% at 0% 100%,rgba(255,94,168,.10),transparent 60%),linear-gradient(180deg,rgba(7,7,7,.2),rgba(7,7,7,.85))}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(42px,8.4vw,104px);line-height:.95;font-weight:900;letter-spacing:-.045em;margin-top:22px;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--neon);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.09em;background:var(--neon);transform-origin:left;transform:scaleX(0);animation:strike 1s .6s forwards cubic-bezier(.2,.7,.2,1)}
+@keyframes strike{to{transform:scaleX(1)}}
+.hero .lead{margin-top:26px;max-width:58ch;font-size:clamp(17px,2.1vw,21px);color:#cfcdc4;line-height:1.5}
+.hero .lead b{color:var(--ink)}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.stats strong{display:block;font-size:clamp(26px,3.6vw,40px);font-weight:900;letter-spacing:-.03em}
+.stats span{font-size:13px;color:var(--soft)}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* MANIFIESTO */
+.manifest{padding:clamp(56px,8vw,96px) 0 clamp(24px,4vw,40px)}
+.manifest .big{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.12;letter-spacing:-.03em;max-width:26ch}
+.manifest .big span{color:var(--dim)}
+.manifest .sub{margin-top:22px;max-width:62ch;color:var(--soft);font-size:18px}
+
+/* ELIGE TU RUTA */
+.choose{padding:clamp(20px,4vw,40px) 0 clamp(64px,9vw,110px)}
+.choose .q{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:18px}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.paths{grid-template-columns:1fr}}
+.path{position:relative;display:flex;flex-direction:column;gap:18px;padding:clamp(22px,3vw,34px);border-radius:24px;border:1px solid var(--line);background:var(--raised);text-decoration:none;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.path::before{content:"";position:absolute;inset:0;opacity:.0;transition:opacity .3s;pointer-events:none}
+.path.ig::before{background:radial-gradient(80% 70% at 100% 0%,rgba(255,94,168,.22),transparent 65%)}
+.path.li::before{background:radial-gradient(80% 70% at 100% 0%,rgba(78,168,255,.22),transparent 65%)}
+.path:hover{transform:translateY(-4px)}
+.path:hover::before{opacity:1}
+.path.ig:hover{border-color:rgba(255,94,168,.55)}
+.path.li:hover{border-color:rgba(78,168,255,.55)}
+.path > *{position:relative}
+.path .tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.path.ig .tag{color:var(--ig)}
+.path.li .tag{color:var(--li)}
+.path h3{font-size:clamp(26px,3.2vw,36px);font-weight:900;line-height:1.05}
+.path .who{font-size:16.5px;color:#d6d4cb}
+.path .who b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#e6e4dc;white-space:nowrap}
+.path .go{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:18px;border-top:1px solid var(--line);font-weight:800;font-size:16px}
+.path .go .arrow{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .25s}
+.path.ig .go .arrow{background:linear-gradient(135deg,var(--ig),var(--ig-2));color:#000}
+.path.li .go .arrow{background:var(--li);color:#000}
+.path:hover .go .arrow{transform:translateY(3px)}
+.icons{display:flex;gap:10px}
+.icons svg{width:30px;height:30px}
+
+/* PROGRAMA */
+.prog{position:relative;padding:clamp(64px,9vw,112px) 0;border-top:1px solid var(--line)}
+.prog.ig{--acc:var(--ig);--acc-2:var(--ig-2);background:radial-gradient(60% 40% at 100% 0%,rgba(255,94,168,.08),transparent 70%),var(--bg)}
+.prog.li{--acc:var(--li);--acc-2:#8fd0ff;background:radial-gradient(60% 40% at 0% 0%,rgba(78,168,255,.09),transparent 70%),var(--bg)}
+.prog .kick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.prog .kick .num{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--acc);color:#000;letter-spacing:0}
+.prog h2{font-size:clamp(34px,5.6vw,68px);font-weight:900;line-height:1;letter-spacing:-.04em;margin-top:18px;max-width:17ch}
+.prog h2 .acc{background:linear-gradient(90deg,var(--acc),var(--acc-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.prog .intro{margin-top:20px;max-width:60ch;font-size:clamp(16px,1.9vw,19px);color:#cfcdc4}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.meta .chip{border-color:color-mix(in srgb,var(--acc) 35%,transparent)}
+
+.top{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+@media(max-width:940px){.top{grid-template-columns:1fr}}
+.video{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/9;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.video.vturb{aspect-ratio:auto}
+.video button{all:unset;cursor:pointer;position:absolute;inset:0;display:grid;place-items:center}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.8;transition:opacity .25s,transform .4s}
+.video button:hover img{opacity:1;transform:scale(1.02)}
+.video .play{position:absolute;width:78px;height:78px;border-radius:50%;background:var(--neon);display:grid;place-items:center;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.video .play svg{width:26px;height:26px;margin-left:4px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-cap{margin-top:12px;font-size:13px;color:var(--dim)}
+
+/* Dolores */
+.pains{margin-top:clamp(56px,7vw,88px)}
+.sec-h{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:26px}
+.sec-h h3{font-size:clamp(26px,3.4vw,40px);font-weight:900;line-height:1.05;max-width:22ch}
+.sec-h p{color:var(--soft);max-width:44ch}
+.pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media(max-width:900px){.pain-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.pain-grid{grid-template-columns:1fr}}
+.pain{padding:20px;border-radius:16px;border:1px solid var(--line);background:var(--raised);cursor:pointer;text-align:left;font:inherit;color:inherit;transition:border-color .2s,background .2s}
+.pain h4{font-size:17px;font-weight:800;display:flex;justify-content:space-between;gap:10px;align-items:start}
+.pain h4 .box{flex:none;width:22px;height:22px;border-radius:6px;border:1.5px solid rgba(255,255,255,.35);display:grid;place-items:center;font-size:13px;color:#000;transition:background .2s,border-color .2s}
+.pain p{margin-top:8px;font-size:14.5px;color:var(--soft)}
+.pain[aria-pressed="true"]{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 9%,var(--raised))}
+.pain[aria-pressed="true"] .box{background:var(--acc);border-color:var(--acc)}
+.pain-out{margin-top:16px;min-height:28px;font-size:16px;font-weight:600;color:var(--ink)}
+.pain-out b{color:var(--acc)}
+
+/* Pilares */
+.pillars{margin-top:clamp(64px,8vw,104px)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tab{font:700 15px/1 var(--sans);padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--soft);cursor:pointer;display:flex;align-items:center;gap:10px;transition:all .2s}
+.tab .i{font-size:12px;font-weight:800;opacity:.7}
+.tab:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+.tab[aria-selected="true"]{background:linear-gradient(90deg,var(--acc),var(--acc-2));color:#000;border-color:transparent}
+.panel{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,4vw,48px);padding:clamp(22px,3.4vw,40px);border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--raised))}
+@media(max-width:900px){.panel{grid-template-columns:1fr}}
+.panel .res{font-size:clamp(26px,3.4vw,40px);font-weight:900;line-height:1.05;letter-spacing:-.03em}
+.panel .why{margin-top:14px;color:#cfcdc4;font-size:17px;max-width:52ch}
+.panel ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.panel li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:15.5px;color:#e4e2da}
+.panel li::before{content:"✔";display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:color-mix(in srgb,var(--acc) 22%,transparent);color:var(--acc);font-size:13px;font-weight:900}
+.panel .side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel .lbl{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.teacher{display:flex;gap:14px;align-items:center;padding:12px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.teacher img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex:none;background:#222}
+.teacher b{display:block;font-size:15.5px}
+.teacher span{font-size:13px;color:var(--soft);line-height:1.35;display:block}
+.proof{padding:16px 18px;border-radius:16px;border-left:3px solid var(--acc);background:rgba(255,255,255,.03);font-size:15px;color:#dcdad1}
+.proof b{color:var(--ink)}
+.panel[data-anim]{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Mentores */
+.mentors{margin-top:clamp(64px,8vw,104px)}
+.m-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.m-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:620px){.m-grid.two{grid-template-columns:1fr}}
+.mentor{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--raised);cursor:pointer;text-align:left;font:inherit;color:inherit;padding:0;display:flex;flex-direction:column;min-width:0;transition:border-color .2s,transform .2s}
+.mentor:hover{border-color:color-mix(in srgb,var(--acc) 60%,transparent);transform:translateY(-3px)}
+.mentor .ph{position:relative;aspect-ratio:1/1;overflow:hidden;background:#1a1a1a}
+.m-grid.two .mentor .ph{aspect-ratio:4/3}
+.mentor .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15);transition:transform .5s,filter .3s}
+.mentor:hover .ph img{transform:scale(1.04);filter:none}
+.mentor .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.85))}
+.mentor .nm{position:absolute;left:14px;right:14px;bottom:12px;z-index:2}
+.mentor .nm b{display:block;font-size:17px;font-weight:800;line-height:1.15}
+.mentor .nm span{font-size:12.5px;color:#d9d7ce}
+.mentor .bd{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.mentor .role{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.mentor .hl{font-size:14.5px;color:#e4e2da;line-height:1.4}
+.mentor .more{font-size:14px;color:var(--soft);line-height:1.5;display:none}
+.mentor[aria-expanded="true"] .more{display:block}
+.mentor .tg{margin-top:auto;font-size:12.5px;font-weight:700;color:var(--soft)}
+.mentor[aria-expanded="true"] .tg{color:var(--acc)}
+
+/* Te llevas + precio */
+.take{margin-top:clamp(64px,8vw,104px);display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+@media(max-width:900px){.take{grid-template-columns:1fr}}
+.take .list{padding:clamp(22px,3vw,36px);border-radius:24px;border:1px solid var(--line);background:var(--raised)}
+.take h3{font-size:clamp(26px,3.2vw,36px);font-weight:900;line-height:1.05}
+.take ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.take li{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:15.5px;color:#e4e2da}
+.take li::before{content:"✔";color:var(--acc);font-weight:900;font-size:17px;line-height:1.4}
+.price{position:relative;padding:clamp(24px,3vw,36px);border-radius:24px;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--acc) 22%,#111),#0c0c0c 60%);border:1px solid color-mix(in srgb,var(--acc) 40%,transparent);display:flex;flex-direction:column;gap:16px}
+.price .lbl{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.price .pname{font-size:20px;font-weight:800}
+.price .amt{font-size:clamp(46px,6vw,66px);font-weight:900;letter-spacing:-.04em;line-height:1}
+.price .amt small{font-size:18px;font-weight:700;color:var(--soft);letter-spacing:0;margin-right:6px}
+.price .pay{font-size:14.5px;color:#d6d4cb}
+.price .dl{display:grid;gap:8px;font-size:14px;color:#cfcdc4;padding-top:14px;border-top:1px solid var(--line)}
+.price .dl div{display:flex;justify-content:space-between;gap:12px}
+.price .dl span:first-child{color:var(--dim)}
+.price .dl span:last-child{text-align:right}
+.price .btn{margin-top:auto;width:100%}
+.close-q{margin-top:clamp(48px,6vw,72px);font-size:clamp(24px,3.4vw,40px);font-weight:900;line-height:1.1;letter-spacing:-.03em;max-width:30ch}
+.close-q span{color:var(--acc)}
+
+/* LOGOS */
+.logos{padding:clamp(56px,7vw,88px) 0;border-top:1px solid var(--line);overflow:hidden}
+.logos p{text-align:center;color:var(--soft);font-size:15px;margin-bottom:28px}
+.logos p b{color:var(--ink)}
+.marquee{display:flex;gap:56px;width:max-content;animation:mq 40s linear infinite;align-items:center}
+.marquee img{height:26px;width:auto;opacity:.7;filter:grayscale(1) brightness(1.6)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq-wrap{mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+
+/* FAQ */
+.faq{padding:clamp(56px,7vw,96px) 0;border-top:1px solid var(--line)}
+.faq h2{font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:24px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:700;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--neon);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:10px;color:var(--soft);max-width:70ch}
+
+/* FINAL */
+.final{padding:clamp(72px,10vw,130px) 0;text-align:center;border-top:1px solid var(--line);background:radial-gradient(60% 60% at 50% 100%,rgba(233,255,123,.10),transparent 70%)}
+.final h2{font-size:clamp(34px,6vw,72px);font-weight:900;line-height:1;letter-spacing:-.04em;max-width:16ch;margin:16px auto 0}
+.final p{margin:20px auto 0;max-width:56ch;color:#cfcdc4;font-size:18px}
+.final .btn{margin-top:34px;font-size:17px;padding:18px 30px}
+.final .note{font-size:13.5px;color:var(--dim);margin-top:14px}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);font-size:13.5px;color:var(--dim)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><svg class="v-logo" role="img" aria-label="30X" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 371.23"><g><g><polygon fill="#f2f2f2" points="133.02 93.4 29.38 90.23 29.38 5.15 226.49 5.15 133.02 93.4"/><path fill="#f2f2f2" d="M315.54,243.89c0,25.08-6.98,47.18-20.89,66.23-13.93,19.08-32.66,34.04-56.21,44.87-23.53,10.82-49.91,16.24-79.14,16.24-35.4,0-66.16-6.88-92.29-20.64-26.11-13.73-48.46-35.38-67.01-64.95l77.83-53.1c5.85,9.97,12.9,18.48,21.14,25.51,8.26,7.05,17.37,12.63,27.34,16.77,9.97,4.12,20.96,6.18,32.99,6.18,10.65,0,20.11-1.36,28.37-4.12,8.24-2.76,14.86-6.95,19.83-12.63,5-5.67,7.48-12.63,7.48-20.89,0-8.94-2.76-16.07-8.26-21.39-5.5-5.32-12.45-9.19-20.86-11.6-8.44-2.41-17.63-3.62-27.59-3.62-4.82,0-9.97.43-15.47,1.28-5.5.88-10.67,2.06-15.47,3.62-4.82,1.56-9.29,3.54-13.41,5.93l-23.73-57.75,68.29-65.65h-.08L252.73,5.15h32.49l18.45,43.84-88.33,83.83c6.78,1.43,13.46,3.36,20.01,5.88,15.29,5.85,28.95,13.83,41,23.98,12.03,10.14,21.57,22.17,28.62,36.1,7.03,13.91,10.57,28.95,10.57,45.12Z"/><polygon fill="#eeff8d" points="1080 5.16 944.25 5.16 870.7 99.01 797.15 5.16 661.4 5.16 802.82 185.61 661.4 366.07 797.15 366.07 870.7 272.22 944.25 366.07 1080 366.07 938.57 185.61 1080 5.16"/><g><path fill="#f2f2f2" d="M565.45,366.01c-15.92,3.52-33.27,5.22-52.07,5.22s-36.86-1.76-53.1-5.32c-15.54-3.34-29.73-8.34-42.56-14.96-1.21-.6-2.41-1.23-3.59-1.88-26.99-14.79-47.38-36.1-61.11-63.95-13.76-27.84-20.61-61.01-20.61-99.5s6.15-72.01,20.61-99.5c1.88-3.57,3.84-6.98,5.87-10.24,28.87-46.15,88.88-62.64,136.63-36.48.2.13.43.23.63.35,5.87,3.26,11.35,6.83,16.44,10.8,15.09,11.6,26.89,26.29,35.88,44.46.03.03.03.08.05.1-9.97-5.67-21.69-8.49-35.15-8.49-14.19,0-26.51,2.96-36.91,8.89.08-.13.13-.28.2-.4-7.36,4.14-13.78,9.82-19.23,17.05-13.26,17-19.86,41.5-19.86,73.46,0,7.86.45,15.24,1.33,22.14,2.18,29.22,8.79,55.01,19.81,77.35,13.76,27.84,33.94,49.16,60.58,63.95,13.61,7.56,28.82,13.18,45.62,16.85.18.05.35.08.53.1Z"/><path fill="#f2f2f2" d="M459.75,5.22c15.92-3.52,33.27-5.22,52.07-5.22s36.86,1.76,53.1,5.32c15.54,3.34,29.73,8.34,42.56,14.96,1.21.6,2.41,1.23,3.59,1.88,26.99,14.79,47.38,36.1,61.11,63.95,13.76,27.84,20.61,61.01,20.61,99.5s-6.15,72.01-20.61,99.5c-1.88,3.57-3.84,6.98-5.87,10.24-28.87,46.15-88.88,62.64-136.63,36.48-.2-.13-.43-.23-.63-.35-5.87-3.26-11.35-6.83-16.44-10.8-15.09-11.6-26.89-26.29-35.88-44.46-.03-.03-.03-.08-.05-.1,9.97,5.67,21.69,8.49,35.15,8.49,14.19,0,26.51-2.96,36.91-8.89-.08.13-.13.28-.2.4,7.36-4.14,13.78-9.82,19.23-17.05,13.26-17,19.86-41.5,19.86-73.46,0-7.86-.45-15.24-1.33-22.14-2.18-29.22-8.79-55.01-19.81-77.35-13.76-27.84-33.94-49.16-60.58-63.95-13.61-7.56-28.82-13.18-45.62-16.85-.18-.05-.35-.08-.53-.1Z"/></g></g></g></svg><span class="n">SOCIAL MEDIA SALES</span></a>
+    <div class="route" role="navigation" aria-label="Programas">
+      <a href="#instagram-tiktok" data-r="ig">Instagram <span class="long">&amp; TikTok</span></a>
+      <a href="#linkedin" data-r="li">LinkedIn</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Nuevas cohortes · 9 y 17 de noviembre 2026</span>
+    <h1>Vender en redes ya no es <em>opcional.</em></h1>
+    <p class="lead">Tus clientes ya están en Instagram, en TikTok y en LinkedIn. Si no te encuentran a ti, encuentran a tu competencia. <b>Le vendas a personas o a empresas, es hora de dejar de esconderte</b> y convertir tu presencia en un canal de ventas que trabaja todos los días.</p>
+    <div class="actions">
+      <a class="btn btn-neon" href="#ruta">Encuentra tu ruta
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+      <a class="btn btn-ghost" href="#mentores-ig">Conoce a los mentores</a>
+    </div>
+    <div class="stats">
+      <div><strong>2</strong><span>programas · una vertical</span></div>
+      <div><strong>7</strong><span>mentores que lo hacen todos los días</span></div>
+      <div><strong data-count="3100" data-prefix="+">+3.100</strong><span>alumnos ejecutivos en 30X</span></div>
+      <div><strong>100%</strong><span>en vivo, online y grabado</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="manifest" aria-label="Por qué ahora">
+  <div class="wrap reveal">
+    <p class="big">La atención es el nuevo activo de tu negocio. <span>Hoy hay gente con menos experiencia que tú llenándose de clientes en redes, solo porque se muestra.</span></p>
+    <p class="sub">No se trata de hacerte viral ni de bailar en cámara. Se trata de que te vean las personas correctas, de que confíen en ti y de que te compren. Lo que cambia es <b>a quién le vendes</b>, y eso define tu ruta.</p>
+  </div>
+</section>
+
+<section class="choose" id="ruta" aria-label="Elige tu ruta">
+  <div class="wrap">
+    <p class="q reveal">¿Cuál es tu ruta?</p>
+    <div class="paths">
+      <a class="path ig reveal" href="#instagram-tiktok" data-pick="ig">
+        <div class="icons" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#ff5ea8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#ff5ea8"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffb35c"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 0 1 0-5.18c.27 0 .53.04.77.12V9.66a5.73 5.73 0 0 0-.77-.05 5.68 5.68 0 1 0 5.68 5.68V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.3 4.3 0 0 1-3.24-1.48z"/></svg>
+        </div>
+        <span class="tag">Le vendes a personas</span>
+        <h3>Instagram &amp; TikTok es para ti</h3>
+        <p class="who">Si le vendes a <b>personas o a pequeñas empresas</b>, y la compra se decide rápido, por confianza, en un DM o en un WhatsApp. Marca personal, servicios, productos, B2C.</p>
+        <div class="chips"><span class="chip">Que te vean</span><span class="chip">Que te crean</span><span class="chip">Que te compren</span></div>
+        <span class="go">Instagram &amp; TikTok es para mí <span class="arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span></span>
+      </a>
+      <a class="path li reveal" href="#linkedin" data-pick="li">
+        <div class="icons" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#4ea8ff"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </div>
+        <span class="tag">Le vendes a empresas</span>
+        <h3>LinkedIn es para ti</h3>
+        <p class="who">Si vendes <b>tickets altos a empresas</b> y cierras negocios B2B que se construyen con confianza y en ciclos largos. Consultoría, servicios profesionales, tecnología, industria.</p>
+        <div class="chips"><span class="chip">Autoridad</span><span class="chip">Posicionamiento</span><span class="chip">Salir a cazar</span></div>
+        <span class="go">LinkedIn es para mí <span class="arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM & TIKTOK ============ -->
+<section class="prog ig" id="instagram-tiktok" aria-label="Instagram & TikTok for Business">
+  <div class="wrap">
+    <div class="top">
+      <div class="reveal">
+        <span class="kick"><span class="num">1</span>Instagram &amp; TikTok for Business</span>
+        <h2>Deja de estar en redes. <span class="acc">Empieza a vender desde ellas.</span></h2>
+        <p class="intro">Seis semanas para instalar la máquina que convierte la atención en clientes: contenido que no depende de la inspiración, formatos que ya explotan en tu nicho, una historia que detiene el scroll y un sistema que lleva esa atención al DM, al WhatsApp y a la venta. Orgánico, sin quemar pauta.</p>
+        <div class="meta">
+          <span class="chip">6 semanas</span><span class="chip">Inicia 9 nov 2026</span><span class="chip">Lun y mié · 1:00 a 3:00 p.m. (COL)</span><span class="chip">12 sesiones en vivo</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="video vturb">
+          <vturb-smartplayer id="vid-6a578624fa26bb2c95a12341" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
+        </div>
+        <p class="video-cap">El programa en un video.</p>
+      </div>
+    </div>
+
+    <div class="pains">
+      <div class="sec-h reveal">
+        <h3>¿Cuántas de estas te pasan hoy?</h3>
+        <p>Toca las que se parecen a tu negocio.</p>
+      </div>
+      <div class="pain-grid" data-group="ig">
+        <button class="pain reveal" aria-pressed="false" data-p="vean"><h4>Invisible en redes <span class="box">✔</span></h4><p>Publicas de vez en cuando y nadie te ve. Tu negocio es bueno y serio, pero no existe para el algoritmo.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="vean"><h4>Contenido sin sistema <span class="box">✔</span></h4><p>Grabas cuando te inspiras, no cuando toca. Sin constancia ni medición, no sabes qué funciona.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="crean"><h4>Solo métricas de vanidad <span class="box">✔</span></h4><p>Tienes likes y vistas, pero ninguna venta. Te vendieron presencia, no resultados.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="compren"><h4>Atención que no convierte <span class="box">✔</span></h4><p>La gente te ve pero no te compra. No tienes un sistema de DM o WhatsApp que cierre la venta.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="compren"><h4>Dependes de la pauta <span class="box">✔</span></h4><p>Cada vez que dejas de pagar, desapareces. No tienes un activo propio que siga creciendo solo.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="multi"><h4>Eres el cuello de botella <span class="box">✔</span></h4><p>Grabar, editar, responder: todo pasa por ti. Sin equipo ni automatización, no puedes escalar.</p></button>
+      </div>
+      <p class="pain-out" id="ig-out" aria-live="polite"></p>
+    </div>
+
+    <div class="pillars" id="pilares-ig">
+      <div class="sec-h reveal">
+        <h3>Tres pilares. Un solo resultado: que te compren.</h3>
+        <p>Cada pilar es un resultado en tu negocio, no un tema de clase. Explóralos.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Pilares de Instagram y TikTok">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="ig-panel" data-t="vean"><span class="i">01</span>Que te vean</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="ig-panel" data-t="crean"><span class="i">02</span>Que te crean</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="ig-panel" data-t="compren"><span class="i">03</span>Que te compren</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="ig-panel" data-t="multi"><span class="i">+</span>El multiplicador</button>
+      </div>
+      <div class="panel" id="ig-panel" role="tabpanel"></div>
+    </div>
+
+    <div class="mentors" id="mentores-ig">
+      <div class="sec-h reveal">
+        <h3>Aprende de la mano de los mejores de Latinoamérica.</h3>
+        <p>Practitioners, no teóricos: cada uno domina una pieza del embudo y la hace todos los días. Toca cada uno para ver su prueba.</p>
+      </div>
+      <div class="m-grid" id="ig-mentors"></div>
+    </div>
+
+    <div class="take">
+      <div class="list reveal">
+        <h3>Lo que te llevas en 6 semanas</h3>
+        <ul>
+          <li>Un sistema para nunca dejar de crear: el contenido integrado a tu semana, con constancia y sin depender de la inspiración.</li>
+          <li>Los formatos que ya explotan en Instagram y TikTok, encontrados con método y adaptados a tu nicho.</li>
+          <li>Tu narrativa y tu storytelling de marca, listos para publicar y para detener el scroll.</li>
+          <li>Un canal que convierte por DM y WhatsApp: de la atención a la conversación, y de la conversación al cliente.</li>
+          <li>Un activo propio que crece solo, en vez de alquilar alcance a un costo que sube cada mes.</li>
+          <li>IA, automatizaciones y tu Dream Team para que la máquina crezca sin depender solo de ti.</li>
+          <li>Acceso por un año a las grabaciones, los materiales y la comunidad en el Hub de 30X, y certificado oficial.</li>
+        </ul>
+      </div>
+      <div class="price reveal">
+        <span class="lbl">Inversión</span>
+        <span class="pname">Instagram &amp; TikTok for Business</span>
+        <span class="amt"><small>USD</small>2.000</span>
+        <span class="pay">Tarjeta de crédito o transferencia bancaria. Hasta 2 cuotas.</span>
+        <div class="dl">
+          <div><span>Fecha</span><span>9 nov a 11 dic 2026</span></div>
+          <div><span>Sesiones</span><span>Lun y mié, 1:00 a 3:00 p.m. (COL)</span></div>
+          <div><span>Modalidad</span><span>100% online, en vivo y grabado</span></div>
+        </div>
+        <a class="btn btn-neon wa" data-ruta="Instagram &amp; TikTok for Business" href="#" target="_blank" rel="noopener">Estoy listo para mi llamada</a>
+      </div>
+    </div>
+
+    <p class="close-q reveal">Deja de estar en redes. <span>Construye la máquina que convierte la atención en clientes,</span> con quienes ya lo hacen todos los días.</p>
+  </div>
+</section>
+
+<!-- ============ LINKEDIN ============ -->
+<section class="prog li" id="linkedin" aria-label="LinkedIn Sales 2.0">
+  <div class="wrap">
+    <div class="top">
+      <div class="reveal">
+        <span class="kick"><span class="num">2</span>LinkedIn Sales 2.0</span>
+        <h2>De invisible en LinkedIn a <span class="acc">referente de tu industria.</span></h2>
+        <p class="intro">En B2B nadie le compra a un desconocido. Cuatro semanas para que las empresas que quieres te reconozcan antes de que les escribas, y para construir la máquina de prospección con IA que sale a buscarlas y te llena la agenda de reuniones.</p>
+        <div class="meta">
+          <span class="chip">4 semanas</span><span class="chip">Inicia 17 nov 2026</span><span class="chip">Mar, jue y vie · 12:00 m a 2:00 p.m. (COL)</span><span class="chip">12 sesiones en vivo</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="video" id="li-video">
+          <button type="button" aria-label="Reproducir el video de LinkedIn Sales 2.0" data-yt="movGc4kW36k">
+            <img src="https://img.youtube.com/vi/movGc4kW36k/maxresdefault.jpg" alt="" loading="lazy" onerror="this.src='https://img.youtube.com/vi/movGc4kW36k/hqdefault.jpg'">
+            <span class="play"><svg viewBox="0 0 24 24" fill="#000"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+        <p class="video-cap">El programa en un video.</p>
+      </div>
+    </div>
+
+    <div class="pains">
+      <div class="sec-h reveal">
+        <h3>¿Cuánto dinero dejas en la mesa porque tus clientes no te conocen?</h3>
+        <p>Toca las que se parecen a tu negocio.</p>
+      </div>
+      <div class="pain-grid" data-group="li">
+        <button class="pain reveal" aria-pressed="false" data-p="autoridad"><h4>Un proveedor más <span class="box">✔</span></h4><p>Tu perfil parece una hoja de vida. Quien decide no sabe por qué tú y no otro.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="autoridad"><h4>Nadie te responde <span class="box">✔</span></h4><p>Escribes en frío a gente que nunca ha oído de ti, y el mensaje se queda en visto.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="caza"><h4>Vives de referidos <span class="box">✔</span></h4><p>Las ventas llegan cuando alguien te recomienda. Si los referidos paran, tu mes también.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="caza"><h4>Le vendes a todos <span class="box">✔</span></h4><p>No tienes una lista de las cuentas que quieres, ni sabes cuándo están listas para comprar.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="caza"><h4>Prospectar te come el día <span class="box">✔</span></h4><p>Buscas, copias y mandas mensajes a mano. Horas que no se convierten en reuniones.</p></button>
+        <button class="pain reveal" aria-pressed="false" data-p="caza"><h4>Pipeline por corazonada <span class="box">✔</span></h4><p>No sabes qué industria, qué país ni qué tamaño de empresa te está respondiendo.</p></button>
+      </div>
+      <p class="pain-out" id="li-out" aria-live="polite"></p>
+    </div>
+
+    <div class="pillars" id="pilares-li">
+      <div class="sec-h reveal">
+        <h3>Primero te posicionas. Después sales a cazar.</h3>
+        <p>Dos componentes en orden: autoridad y luego conversión. Explóralos.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Componentes de LinkedIn">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="li-panel" data-t="autoridad"><span class="i">01</span>Autoridad y posicionamiento</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="li-panel" data-t="caza"><span class="i">02</span>Salir a cazar</button>
+      </div>
+      <div class="panel" id="li-panel" role="tabpanel"></div>
+    </div>
+
+    <div class="mentors" id="mentores-li">
+      <div class="sec-h reveal">
+        <h3>Aprende con quienes ya lo construyeron.</h3>
+        <p>Toca cada uno para ver su prueba.</p>
+      </div>
+      <div class="m-grid two" id="li-mentors"></div>
+    </div>
+
+    <div class="take">
+      <div class="list reveal">
+        <h3>Lo que te llevas en 4 semanas</h3>
+        <ul>
+          <li>Un perfil que ya no explica quién eres: demuestra por qué eres la referencia de tu categoría.</li>
+          <li>Un motor de contenido que todos los días te posiciona frente a quien decide. Cuando llegue tu mensaje, ya sabrán quién lo manda.</li>
+          <li>Tu mapa de prospección: cliente ideal, señales de compra y el momento exacto para entrar.</li>
+          <li>Tu lista de cuentas objetivo, con nombre y apellido de quien decide, enriquecida y lista para contactar.</li>
+          <li>Mensajes hiperpersonalizados con IA y envío automático con límites seguros para tu cuenta.</li>
+          <li>Un tablero que te dice qué región, qué industria y qué tamaño de empresa responde, y dónde corregir.</li>
+          <li>Acceso por un año al Hub de 30X, a las grabaciones y a la comunidad privada, y certificado oficial.</li>
+        </ul>
+      </div>
+      <div class="price reveal">
+        <span class="lbl">Inversión</span>
+        <span class="pname">LinkedIn Sales 2.0</span>
+        <span class="amt"><small>USD</small>1.950</span>
+        <span class="pay">Tarjeta de crédito o transferencia bancaria. Hasta 2 cuotas.</span>
+        <div class="dl">
+          <div><span>Fecha</span><span>Desde el 17 nov 2026 · 4 semanas</span></div>
+          <div><span>Sesiones</span><span>Mar, jue y vie, 12:00 m a 2:00 p.m. (COL)</span></div>
+          <div><span>Modalidad</span><span>100% online, en vivo y grabado</span></div>
+        </div>
+        <a class="btn btn-neon wa" data-ruta="LinkedIn Sales 2.0" href="#" target="_blank" rel="noopener">Estoy listo para mi llamada</a>
+      </div>
+    </div>
+
+    <p class="close-q reveal">Deja de prospectar como en 2014. <span>Construye la máquina B2B que agenda por ti,</span> de la mano de quienes ya la construyeron.</p>
+  </div>
+</section>
+
+<section class="logos" aria-label="Empresas de nuestros alumnos">
+  <p><b>+3.100 alumnos ejecutivos</b> de 30X ayudan a crecer a empresas como estas.</p>
+  <div class="mq-wrap"><div class="marquee" id="mq"></div></div>
+</section>
+
+<section class="faq" aria-label="Preguntas frecuentes">
+  <div class="wrap">
+    <h2>Preguntas rápidas</h2>
+    <details><summary>¿Puedo tomar los dos programas?</summary><p>Sí. Los horarios no se cruzan: Instagram &amp; TikTok es lunes y miércoles de 1:00 a 3:00 p.m., y LinkedIn es martes, jueves y viernes de 12:00 m a 2:00 p.m. (hora Colombia). En tu llamada definimos si te conviene uno o los dos, y en qué orden.</p></details>
+    <details><summary>¿Necesito tener seguidores o experiencia en redes?</summary><p>No. Funciona desde cualquier punto de partida, con o sin presencia en redes y con o sin equipo de ventas. Andrés Bilbao, cofundador de Rappi, odiaba grabarse y pasó de no existir en redes a más de 830 mil seguidores en Instagram.</p></details>
+    <details><summary>¿Y si no puedo asistir a una sesión en vivo?</summary><p>Todas las sesiones quedan grabadas. Tienes acceso por un año a las grabaciones, los materiales y la comunidad en el Hub de 30X.</p></details>
+    <details><summary>¿Es un curso de teoría?</summary><p>No. Cada sesión termina con un entregable construido sobre tu propio negocio. Si no lo puedes ejecutar la semana siguiente, no está en el programa.</p></details>
+  </div>
+</section>
+
+<section class="final" aria-label="Tu llamada">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>La venta empieza aquí</span>
+    <h2>Tu llamada es el primer paso.</h2>
+    <p>En la llamada con el equipo de admisiones vemos tu negocio, confirmamos tu ruta y resolvemos tus preguntas. Llega con lo que viste aquí en la cabeza.</p>
+    <a class="btn btn-neon wa" data-ruta="" href="#" target="_blank" rel="noopener">Estoy listo para mi llamada a la hora agendada
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.21 4.24-9.45 9.46-9.45a9.4 9.4 0 0 1 6.69 2.77 9.39 9.39 0 0 1 2.77 6.69c0 5.21-4.24 9.45-9.44 9.45zm8.04-17.49A11.3 11.3 0 0 0 12.04.67C5.77.67.67 5.77.67 12.04c0 2 .52 3.96 1.52 5.68L.57 23.33l5.74-1.5a11.33 11.33 0 0 0 5.73 1.46h.01c6.27 0 11.37-5.1 11.37-11.37 0-3.04-1.18-5.89-3.34-8.04z"/></svg></a>
+    <p class="note">Se abre WhatsApp con el mensaje listo: escoge el chat de admisiones que te contactó.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© 2026 30X · Social Media Sales</span><span>La mejor educación ejecutiva de Latinoamérica.</span></div>
+</footer>
+
+<script>
+(function(){
+  var F='https://framerusercontent.com/images/';
+  var img=function(id,ext){return F+id+'.'+ext+'?scale-down-to=512';};
+
+  /* ---------- Mentores ---------- */
+  var M={
+    bilbao:{n:'Andrés Bilbao',r:'Visión de negocio y escalamiento',t:'Cofundador de Rappi y CEO de 30X',ph:img('8iVvAELBTCgEmBHgEYE4VnXCcr4','png'),pos:'60% 30%',
+      hl:'Odiaba grabarse. Pasó de no existir en redes a +830 mil seguidores en Instagram.',
+      more:'Llegó a 24 millones de vistas en un solo mes, tratando el contenido como un canal de negocio y no como un show. La prueba viva del sistema.'},
+    otalora:{n:'David Otálora',r:'Alcance y algoritmo',t:'Fundador de Viral Coach · @viralcoach',ph:img('DF79Ir9J1fZPQDVzATFP6oYoDM','jpg'),
+      hl:'+14 millones de seguidores generados entre su marca y sus clientes, 100% orgánico.',
+      more:'Sin un peso en pauta y con más de 50 casos de éxito. Estratega de crecimiento de Andrés Bilbao: nadie entiende mejor cómo funciona el algoritmo y cómo hacer que un contenido explote.'},
+    prieto:{n:'José Manuel Prieto',r:'Confianza y persuasión',t:'Estratega de contenido y narrativa · @joseprieto.co',ph:img('PEaqW7feH62bP4PuAdOwo9sBc8','png'),
+      hl:'Dirigió las redes de una campaña presidencial: de casi desconocido a 1,2 millones de votos.',
+      more:'100 millones de vistas en Instagram y 30 millones en TikTok en 30 días, todo orgánico. Eso no es hacer contenido: es persuasión a escala.'},
+    sanchez:{n:'Santiago Sánchez',r:'Conversión y ventas',t:'Fundador de Converzzo · @santisanchez.zz',ph:img('jX7sJXkSbo8mGLGRRtVUguNLh28','png'),
+      hl:'Convierte la atención en conversaciones, y las conversaciones en clientes que pagan.',
+      more:'Más de 6 años, más de 500 empresas y más de 10.000 emprendedores en Estados Unidos, México, Colombia y Panamá construyendo ventas orgánicas.'},
+    victoria:{n:'Anderson Victoria',r:'IA aplicada a contenido',t:'Director creativo de performance de 30X y Andrés Bilbao · @andersontv.ia',ph:img('spNf808Wj3UfDSrnDFPZZsENS1E','jpeg'),
+      hl:'Construye avatares, clones y sistemas de contenido con IA que escalan sin perder la esencia de marca.',
+      more:'Más volumen y menos horas: Claude como cerebro de tu marca, clonación de voz y plantillas para producir a escala, siempre mezclado con contenido real.'},
+    luque:{n:'Daniela Luque Díaz',r:'Autoridad y marca personal',t:'Especialista en marca personal en LinkedIn',ph:img('vFDxvoeSluvbAatC4vFOR2w14','jpg'),
+      hl:'De 705 conexiones a más de 600.000 seguidores en 36 meses, con el mismo método que enseña.',
+      more:'En 2025 Favikon la nombró la creadora con mayor impacto en LinkedIn en español. Más de 1.200 días consecutivos publicando y más de 200 ejecutivos transformados con su método.'},
+    cortes:{n:'Sebastián Cortés',r:'Sistema comercial y outbound',t:'Líder de estrategia Outbound B2B en 30X · ex Rappi',ph:img('YVtoxuZpFvxXvsWG33YU6oLUjb8','jpeg'),
+      hl:'Dirige el outbound de 30X: sus campañas en LinkedIn con IA logran 20% de tasa de respuesta.',
+      more:'En Rappi gestionó USD 15 millones por trimestre en growth y subió la conversión global de 7% a 9%. Más de 8 años construyendo crecimiento en tech, proptech, retail y startups.'}
+  };
+  function mentorCard(k){
+    var m=M[k];
+    var b=document.createElement('button');
+    b.className='mentor reveal';b.type='button';b.setAttribute('aria-expanded','false');
+    b.innerHTML='<div class="ph"><img loading="lazy" alt="'+m.n+'" src="'+m.ph+'"'+(m.pos?' style="object-position:'+m.pos+'"':'')+'><div class="nm"><b>'+m.n+'</b><span>'+m.t+'</span></div></div>'+
+      '<div class="bd"><span class="role">'+m.r+'</span><p class="hl">'+m.hl+'</p><p class="more">'+m.more+'</p><span class="tg">Ver su prueba +</span></div>';
+    b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.querySelector('.tg').textContent=o?'Ver su prueba +':'Cerrar −';});
+    return b;
+  }
+  ['bilbao','otalora','prieto','sanchez','victoria'].forEach(function(k){document.getElementById('ig-mentors').appendChild(mentorCard(k));});
+  ['luque','cortes'].forEach(function(k){document.getElementById('li-mentors').appendChild(mentorCard(k));});
+
+  /* ---------- Pilares ---------- */
+  var P={
+    vean:{res:'Dejas de ser invisible.',why:'Entiendes de verdad qué premia el algoritmo de Instagram y TikTok, y publicas con un sistema que no depende de la inspiración. Esto te saca de la invisibilidad.',
+      li:['Tu contenido metido en tu semana, con un ritmo que sí puedes sostener: la meta de tus primeros 100 videos.','Los formatos que ya explotan en tu nicho, encontrados con método y grabados para tu negocio.','TikTok como laboratorio para probar ideas rápido; Instagram como casa.','Alcance orgánico real, sin quemar pauta.'],
+      who:['otalora','prieto'],proof:'<b>David Otálora</b> creció una cuenta a 2,5 millones de seguidores con apenas unos 80 videos.'},
+    crean:{res:'Tu historia detiene el scroll.',why:'La gente no le compra al que más publica: le compra al que le cree. Construyes la narrativa que convierte desconocidos en una comunidad que confía en ti.',
+      li:['Tu historia de origen y la de tu empresa, contadas para redes.','Un framework de 5 pasos: gancho, problema, camino, aprendizaje y llamado a la acción.','Las historias que generan confianza y venden.','Autoridad que hace inbound: dejas de perseguir clientes.'],
+      who:['prieto'],proof:'El storytelling que llevó una campaña presidencial de casi desconocida a <b>1,2 millones de votos</b>, todo orgánico.'},
+    compren:{res:'La atención se vuelve clientes.',why:'La pieza que casi nadie tiene. Pasas de likes a conversaciones, y de conversaciones a ventas, con un sistema que trabaja por ti en DM y WhatsApp.',
+      li:['Tu sistema de conversión por DM y WhatsApp, con el método de Converzzo.','Historias, palabras clave y automatizaciones que llevan del contenido al chat.','El balance entre contenido de alcance, de autoridad y de conversión.','Un activo propio que vende aunque dejes de pagar pauta.'],
+      who:['sanchez'],proof:'<b>Converzzo</b>: más de 500 empresas y más de 10.000 emprendedores construyendo ventas orgánicas.'},
+    multi:{res:'Creces sin ser el cuello de botella.',why:'IA y equipo para producir más con menos horas, sin perder autenticidad, y la claridad de a quién contratar y cuándo.',
+      li:['Claude como cerebro de tu marca: investigar, crear, automatizar y medir.','Avatares, clonación de voz y activos digitales con IA, mezclados con contenido real.','Tu Dream Team: contratar por cuello de botella, no por cargos.','Tu plan de crecimiento para los próximos 100 videos.'],
+      who:['victoria','bilbao'],proof:'En 30X, Instagram es hoy uno de los canales que más vende programas, inmersiones y conferencias.'},
+    autoridad:{res:'Que sepan quién eres antes de que les escribas.',why:'Dejas de ser un proveedor más y te vuelves la referencia de tu nicho frente a quien decide. Cuando llegue tu mensaje, ya sabrán quién lo manda.',
+      li:['Tu cliente ideal con nombre, cargo y situación concreta.','Tu perfil reescrito como vitrina de venta, no como hoja de vida.','Tu catálogo de temas: unos que atraen público y otros que convierten en clientes.','Un sistema de contenido repetible con IA para no quedarte nunca en blanco.'],
+      who:['luque'],proof:'<b>Daniela Luque Díaz</b> pasó de 705 conexiones a más de 600.000 seguidores con este método.'},
+    caza:{res:'Sal a buscar a quien te necesita, justo cuando te necesita.',why:'Una máquina de prospección con IA que encuentra a las empresas listas para comprar, les escribe uno a uno con tu voz y te llena la agenda de reuniones B2B, sin depender de referidos.',
+      li:['Señales de compra: la empresa contrata, se expande, cambia de directivo o lanza algo.','Tu lista de cuentas con nombre y apellido de quien decide, armada en Sales Navigator.','Mensajes hiperpersonalizados con IA y envío automático con límites seguros.','Un tablero con contactados, respuestas, reuniones y cierres, para ajustar con datos y no por corazonada.'],
+      who:['cortes'],proof:'Las campañas de outbound que dirige <b>Sebastián Cortés</b> en 30X logran <b>20% de tasa de respuesta</b>.'}
+  };
+  function render(panel,key){
+    var p=P[key];
+    var t=p.who.map(function(k){var m=M[k];return '<div class="teacher"><img alt="" loading="lazy" src="'+m.ph+'"'+(m.pos?' style="object-position:'+m.pos+'"':'')+'><div><b>'+m.n+'</b><span>'+m.t+'</span></div></div>';}).join('');
+    panel.innerHTML='<div><p class="res">'+p.res+'</p><p class="why">'+p.why+'</p><ul>'+p.li.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>'+
+      '<div class="side"><span class="lbl">Te lo enseña</span>'+t+'<div class="proof">'+p.proof+'</div></div>';
+    panel.removeAttribute('data-anim');void panel.offsetWidth;panel.setAttribute('data-anim','');
+  }
+  document.querySelectorAll('.pillars').forEach(function(sec){
+    var panel=sec.querySelector('.panel');var tabs=sec.querySelectorAll('.tab');
+    function sel(key){tabs.forEach(function(x){x.setAttribute('aria-selected',String(x.dataset.t===key));});render(panel,key);}
+    tabs.forEach(function(tb){tb.addEventListener('click',function(){sel(tb.dataset.t);});});
+    sel(tabs[0].dataset.t);
+    sec.selectTab=sel;
+  });
+
+  /* ---------- Dolores -> pilar ---------- */
+  var names={vean:'Que te vean',crean:'Que te crean',compren:'Que te compren',multi:'El multiplicador',autoridad:'Autoridad y posicionamiento',caza:'Salir a cazar'};
+  document.querySelectorAll('.pain-grid').forEach(function(g){
+    var grp=g.dataset.group;var out=document.getElementById(grp+'-out');
+    var pill=document.getElementById('pilares-'+grp);
+    g.querySelectorAll('.pain').forEach(function(b){
+      b.addEventListener('click',function(){
+        b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true'));
+        var on=g.querySelectorAll('.pain[aria-pressed="true"]');
+        if(!on.length){out.innerHTML='';return;}
+        var c={};on.forEach(function(x){c[x.dataset.p]=(c[x.dataset.p]||0)+1;});
+        var top=Object.keys(c).sort(function(a,b){return c[b]-c[a];})[0];
+        out.innerHTML=on.length+' de 6. Tu prioridad está en <b>'+names[top]+'</b>. <a href="#pilares-'+grp+'" data-go="'+top+'">Míralo aquí ↓</a>';
+      });
+    });
+    out.addEventListener('click',function(e){var a=e.target.closest('a[data-go]');if(a&&pill.selectTab){pill.selectTab(a.dataset.go);}});
+  });
+
+  /* ---------- WhatsApp ---------- */
+  document.querySelectorAll('a.wa').forEach(function(a){
+    var r=a.dataset.ruta;
+    var msg='Hola, estoy listo para mi llamada con el equipo de admisiones de 30X a la hora agendada.'+(r?' Me interesa '+r+'.':' Ruta Social Media Sales.');
+    a.href='https://wa.me/?text='+encodeURIComponent(msg);
+  });
+
+  /* ---------- YouTube ---------- */
+  document.querySelectorAll('[data-yt]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.title='LinkedIn Sales 2.0';
+      b.parentNode.replaceChild(f,b);
+    });
+  });
+
+  /* ---------- VTurb (video de Instagram & TikTok) ---------- */
+  var s=document.createElement('script');
+  s.src='https://scripts.converteai.net/eec09525-04e1-4ff0-91c3-535a02f1894b/players/6a578624fa26bb2c95a12341/v4/player.js';
+  s.async=true;document.head.appendChild(s);
+
+  /* ---------- Logos ---------- */
+  var L=['7ofWLN8uIF99cL7Nm9stwUbL0','1jAuPQDCLeI32jRsLwU4CyFFiYc','UPeatBRNNmyLFrzpwR1phPDXnI','dVFzJNSyWYzrHZmYsr3nFdDD4Fs','cquRsgK412X22ZSkoWZKnA67krM','YE3195tv7KqZLXCITOAzrDtCRWM','klX8ObicMP8aBAqaEyVSM2kqYlI','PKMZ9K7uqgoqPiiekrZr6W4Vc','Vr3cvNewf1zRbbXo9QVOJ4lRyE','WhFLXvGBA3xtBiawWlAwYc0c4','bLX0rwvAQAGL1qfUaR2U8f42s','YlhuEQBZOrDCGc3cLBBfe8ar4Q','lyJoihzxTgvbF3FnU4LO7oec','KyCOhUHfY9x7jmBhBWUPvHHx9o','YEdftWhFWdNqYpp1aEViIrV0FpM','mig94rOK917Vuof7v37l7KkHmg'];
+  var mq=document.getElementById('mq');
+  L.concat(L).forEach(function(id){var i=document.createElement('img');i.src=F+id+'.png?scale-down-to=256';i.alt='';i.loading='lazy';mq.appendChild(i);});
+
+  /* ---------- Ruta activa (nav) ---------- */
+  var links=document.querySelectorAll('.route a');
+  var secs=[document.getElementById('instagram-tiktok'),document.getElementById('linkedin')];
+  function spy(){
+    var y=window.scrollY+window.innerHeight*.35;var cur=null;
+    secs.forEach(function(s){if(y>=s.offsetTop&&y<s.offsetTop+s.offsetHeight)cur=s.id;});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur);});
+  }
+  window.addEventListener('scroll',spy,{passive:true});spy();
+
+  /* ---------- Reveal ---------- */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+
+  /* ---------- Hero: red de puntos (atención que conecta) ---------- */
+  var c=document.getElementById('fx');
+  if(c&&c.getContext&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var x=c.getContext('2d'),W,H,pts=[],DPR=Math.min(2,window.devicePixelRatio||1);
+    var cols=['rgba(233,255,123,','rgba(255,94,168,','rgba(78,168,255,'];
+    function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*DPR;c.height=H*DPR;x.setTransform(DPR,0,0,DPR,0,0);
+      var n=Math.min(70,Math.round(W*H/16000));pts=[];for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,c:cols[i%3]});}
+    function draw(){x.clearRect(0,0,W,H);
+      for(var i=0;i<pts.length;i++){var p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+        for(var j=i+1;j<pts.length;j++){var q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=dx*dx+dy*dy;if(d<14000){x.strokeStyle=p.c+(0.16*(1-d/14000))+')';x.lineWidth=1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke();}}
+        x.fillStyle=p.c+'0.75)';x.beginPath();x.arc(p.x,p.y,1.8,0,6.283);x.fill();}
+      requestAnimationFrame(draw);}
+    size();window.addEventListener('resize',size);draw();
+  }
+})();
+</script>
+</body>
+</html>
