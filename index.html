@@ -348,8 +348,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         </div>
       </div>
       <div class="reveal">
-        <div class="video vturb">
-          <vturb-smartplayer id="vid-6a578624fa26bb2c95a12341" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
+        <div class="video" id="ig-video">
+          <button type="button" aria-label="Reproducir el video de Instagram &amp; TikTok for Business" data-vturb="6a578624fa26bb2c95a12341">
+            <img src="https://cdn.converteai.net/eec09525-04e1-4ff0-91c3-535a02f1894b/6a5785fc94e41cc1c7fb6b86/poster.jpg" alt="" loading="lazy">
+            <span class="play"><svg viewBox="0 0 24 24" fill="#000"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
         </div>
         <p class="video-cap">El programa en un video.</p>
       </div>
@@ -650,10 +653,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     });
   });
 
-  /* ---------- VTurb (video de Instagram & TikTok) ---------- */
-  var s=document.createElement('script');
-  s.src='https://scripts.converteai.net/eec09525-04e1-4ff0-91c3-535a02f1894b/players/6a578624fa26bb2c95a12341/v4/player.js';
-  s.async=true;document.head.appendChild(s);
+  /* ---------- VTurb (video de Instagram & TikTok): solo carga al tocar play ---------- */
+  document.querySelectorAll('[data-vturb]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var id=b.dataset.vturb, box=b.parentNode;
+      box.classList.add('vturb');
+      var pl=document.createElement('vturb-smartplayer');
+      pl.id='vid-'+id;pl.style.cssText='display:block;margin:0 auto;width:100%;';
+      box.replaceChild(pl,b);
+      var s=document.createElement('script');
+      s.src='https://scripts.converteai.net/eec09525-04e1-4ff0-91c3-535a02f1894b/players/'+id+'/v4/player.js';
+      s.async=true;document.head.appendChild(s);
+    });
+  });
 
   /* ---------- Logos ---------- */
   var L=['7ofWLN8uIF99cL7Nm9stwUbL0','1jAuPQDCLeI32jRsLwU4CyFFiYc','UPeatBRNNmyLFrzpwR1phPDXnI','dVFzJNSyWYzrHZmYsr3nFdDD4Fs','cquRsgK412X22ZSkoWZKnA67krM','YE3195tv7KqZLXCITOAzrDtCRWM','klX8ObicMP8aBAqaEyVSM2kqYlI','PKMZ9K7uqgoqPiiekrZr6W4Vc','Vr3cvNewf1zRbbXo9QVOJ4lRyE','WhFLXvGBA3xtBiawWlAwYc0c4','bLX0rwvAQAGL1qfUaR2U8f42s','YlhuEQBZOrDCGc3cLBBfe8ar4Q','lyJoihzxTgvbF3FnU4LO7oec','KyCOhUHfY9x7jmBhBWUPvHHx9o','YEdftWhFWdNqYpp1aEViIrV0FpM','mig94rOK917Vuof7v37l7KkHmg'];
