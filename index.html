@@ -147,6 +147,12 @@ p{margin:0}
 .pain p{margin-top:8px;font-size:14.5px;color:var(--soft)}
 .pain[aria-pressed="true"]{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 9%,var(--raised))}
 .pain[aria-pressed="true"] .box{background:var(--acc);border-color:var(--acc)}
+.pain-grid.static{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:560px){.pain-grid.static{grid-template-columns:1fr}}
+.pain-grid.static .pain{cursor:default;border-left:3px solid var(--acc)}
+.pain-yes{margin-top:18px;font-size:clamp(18px,2.2vw,22px);font-weight:800}
+.pain-yes a{color:var(--acc);text-decoration:none;margin-left:6px}
+.pain-yes a:hover{text-decoration:underline}
 .pain-out{margin-top:16px;min-height:28px;font-size:16px;font-weight:600;color:var(--ink)}
 .pain-out b{color:var(--acc)}
 
@@ -342,18 +348,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
     <div class="pains">
       <div class="sec-h reveal">
-        <h3>¿Cuántas de estas te pasan hoy?</h3>
-        <p>Toca las que se parecen a tu negocio.</p>
+        <h3>¿Te pasa algo de esto?</h3>
+        <p>Si te identificas con al menos una, este programa es para ti.</p>
       </div>
-      <div class="pain-grid" data-group="ig">
-        <button class="pain reveal" aria-pressed="false" data-p="vean"><h4>Invisible en redes <span class="box">✔</span></h4><p>Publicas de vez en cuando y nadie te ve. Tu negocio es bueno y serio, pero no existe para el algoritmo.</p></button>
-        <button class="pain reveal" aria-pressed="false" data-p="vean"><h4>Contenido sin sistema <span class="box">✔</span></h4><p>Grabas cuando te inspiras, no cuando toca. Sin constancia ni medición, no sabes qué funciona.</p></button>
-        <button class="pain reveal" aria-pressed="false" data-p="crean"><h4>Solo métricas de vanidad <span class="box">✔</span></h4><p>Tienes likes y vistas, pero ninguna venta. Te vendieron presencia, no resultados.</p></button>
-        <button class="pain reveal" aria-pressed="false" data-p="compren"><h4>Atención que no convierte <span class="box">✔</span></h4><p>La gente te ve pero no te compra. No tienes un sistema de DM o WhatsApp que cierre la venta.</p></button>
-        <button class="pain reveal" aria-pressed="false" data-p="compren"><h4>Dependes de la pauta <span class="box">✔</span></h4><p>Cada vez que dejas de pagar, desapareces. No tienes un activo propio que siga creciendo solo.</p></button>
-        <button class="pain reveal" aria-pressed="false" data-p="multi"><h4>Eres el cuello de botella <span class="box">✔</span></h4><p>Grabar, editar, responder: todo pasa por ti. Sin equipo ni automatización, no puedes escalar.</p></button>
+      <div class="pain-grid static">
+        <div class="pain reveal"><h4>Invisible en redes</h4><p>Publicas de vez en cuando y nadie te ve. Tu negocio es bueno y serio, pero no existe para el algoritmo.</p></div>
+        <div class="pain reveal"><h4>Contenido sin sistema</h4><p>Grabas cuando te inspiras, no cuando toca. Sin constancia ni medición, no sabes qué funciona.</p></div>
+        <div class="pain reveal"><h4>Atención que no convierte</h4><p>La gente te ve pero no te compra. No tienes un sistema de DM o WhatsApp que cierre la venta.</p></div>
+        <div class="pain reveal"><h4>Dependes de la pauta</h4><p>Cada vez que dejas de pagar, desapareces. No tienes un activo propio que siga creciendo solo.</p></div>
       </div>
-      <p class="pain-out" id="ig-out" aria-live="polite"></p>
+      <p class="pain-yes reveal">Este programa es para ti. <a href="#pilares-ig">Mira lo que cambia ↓</a></p>
     </div>
 
     <div class="pillars" id="pilares-ig">
@@ -608,7 +612,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
   /* ---------- Dolores -> pilar ---------- */
   var names={vean:'Que te vean',crean:'Que te crean',compren:'Que te compren',multi:'El multiplicador',autoridad:'Autoridad y posicionamiento',caza:'Salir a cazar'};
-  document.querySelectorAll('.pain-grid').forEach(function(g){
+  document.querySelectorAll('.pain-grid[data-group]').forEach(function(g){
     var grp=g.dataset.group;var out=document.getElementById(grp+'-out');
     var pill=document.getElementById('pilares-'+grp);
     g.querySelectorAll('.pain').forEach(function(b){
